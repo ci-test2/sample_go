@@ -3,6 +3,7 @@ language: go
 go:
   - 1.2
 
+build_image: drydock/u12gol:tip
 env:
   - CI_REPORT=shippable/testresults/junit.xml
 
