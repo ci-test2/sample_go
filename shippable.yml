@@ -3,7 +3,7 @@ language: go
 go:
   - 1.2
   - 1.3
-  - 1.4
+#  - 1.4
   
 env:
   - CI_REPORT=shippable/testresults/junit.xml
@@ -31,3 +31,11 @@ script:
   - $GOPATH/bin/gocover-cobertura < coverage.txt > shippable/codecoverage/coverage.xml
 
 #cache: true
+notifications:
+  email:
+    recipients:
+      - test_ci2@yahoo.in
+      - varsha@shippable.com
+  irc:
+    - "chat.freenode.net#test-irc"
+    
